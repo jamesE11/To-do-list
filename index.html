@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <!-- Task Input -->
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <input type="date" id="taskDate">
+        <button onclick="addTask()">Add Task</button>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Control Buttons -->
+        <div class="control-buttons">
+            <button onclick="clearTasks()">Clear All</button>
+            <button onclick="undoDelete()">Undo Last Delete</button>
+            <button onclick="toggleDarkMode()">Dark Mode</button>
+        </div>
+
+        <!-- Theme Selector -->
+        <label for="themeSelector">Theme:</label>
+        <select id="themeSelector" onchange="changeTheme()">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
